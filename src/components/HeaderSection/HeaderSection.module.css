@@ -1,0 +1,31 @@
+.headerSection {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerSection h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.headerSection span {
+  font-weight: 400;
+  color: #6a6a6a;
+  margin-bottom: 10px;
+}
+
+.headerSection button {
+  background-color: rgb(34, 189, 241);
+  font-size: 15px;
+  color: #fff;
+  transition: all 0.3s;
+  /* box-shadow: 5px 5px 5px lightblue; */
+}
+
+.headerSection button:hover {
+  background-color: rgb(30, 159, 202);
+}

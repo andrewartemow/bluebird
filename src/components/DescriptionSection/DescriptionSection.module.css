@@ -1,0 +1,25 @@
+.descriptionSection h2 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.descriptionSection ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.descriptionSection li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.descriptionSection li p {
+  font-weight: 400;
+  color: #6a6a6a;
+  max-width: 600px;
+  text-align: left;
+}

@@ -1,0 +1,13 @@
+.coverLetterSection {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.coverLetterSection p {
+  margin-bottom: 15px;
+}
