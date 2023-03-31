@@ -1,8 +1,10 @@
 import { RiBriefcase4Fill } from '@react-icons/all-files/ri/RiBriefcase4Fill';
 import { RiSearch2Line } from '@react-icons/all-files/ri/RiSearch2Line';
 import { RiEmotionFill } from '@react-icons/all-files/ri/RiEmotionFill';
+
 import Button from '../../uxElements/Button/Button';
 import Section from '../Section/Section';
+
 import styles from './DescriptionSection.module.css';
 
 const DescriptionSection = () => {

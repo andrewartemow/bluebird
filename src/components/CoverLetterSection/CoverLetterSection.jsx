@@ -31,9 +31,12 @@ const CoverLetterSection = () => {
       return (
         <>
           <p>{letter}</p>
-          <CopyToClipboard text={letter}>
-            <Button>Copy Letter</Button>
-          </CopyToClipboard>
+
+          <Button>
+            <CopyToClipboard text={letter}>
+              <span>Copy Letter</span>
+            </CopyToClipboard>
+          </Button>
         </>
       );
     }
