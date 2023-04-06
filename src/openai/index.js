@@ -1,10 +1,4 @@
-const { Configuration, OpenAIApi } = require('openai');
-
-const configuration = new Configuration({
-  apiKey: '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',
-});
-
-const openai = new OpenAIApi(configuration);
+import axios from 'axios';
 
 const runPrompt = async ({
   firstName,
@@ -16,15 +10,25 @@ const runPrompt = async ({
 }) => {
   const prompt = `I want to get a job. Write me cover letter with this information, name: ${firstName}, lastName: ${lastName}, job: ${job}, skills: ${skills}, email: ${email}, phone: ${phone}`;
 
-  const response = await openai.createCompletion({
-    model: 'text-davinci-003',
-    prompt: prompt,
-    max_tokens: 2048,
-    temperature: 1,
-  });
+  const options = {
+    method: 'POST',
+    url: 'https://openai80.p.rapidapi.com/chat/completions',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': 'd4d20f5e32msh0d9713f65b02a0cp10fc18jsn65e6918d1482',
+      'X-RapidAPI-Host': 'openai80.p.rapidapi.com',
+    },
+    data: `{"model":"gpt-3.5-turbo","messages":[{"role":"user","content":"${prompt}"}]}`,
+  };
 
-  const responseText = response.data.choices[0].text;
-  return responseText;
+  return axios
+    .request(options)
+    .then(function (response) {
+      return response.data.choices[0].message.content;
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
 };
 
 export default runPrompt;
