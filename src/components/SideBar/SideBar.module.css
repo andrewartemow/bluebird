@@ -25,7 +25,7 @@ input.inputError {
   border-color: #fc8181;
 }
 
-p.errorText {
+label.errorText {
   color: #fc8181;
   font-size: 14px;
 }
@@ -37,4 +37,26 @@ p.errorText {
 
 .backBtn:hover {
   background-color: rgb(92, 92, 97);
+}
+
+@media (max-width: 680px) {
+  .sidebar {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    max-width: 100%;
+    min-height: 50vh;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgb(29 29 32);
+    color: #fff;
+    padding: 15px;
+  }
+
+  .sidebar input {
+    display: block;
+    margin: 10px 0;
+  }
 }

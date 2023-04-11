@@ -33,7 +33,7 @@ const DescriptionSection = () => {
   ];
 
   return (
-    <Section withContainer={true}>
+    <Section sectionStyles={{ padding: '20px' }} withContainer={true}>
       <div className={styles.descriptionSection}>
         <h2>What Benefits of Cover Letter?</h2>
         <ul>

@@ -60,7 +60,7 @@ const SideBar = () => {
       <Logo />
       <form onSubmit={handleSubmit}>
         {errors.firstName && touched.firstName && (
-          <p className={styles.errorText}>{errors.firstName}</p>
+          <label className={styles.errorText}>{errors.firstName}</label>
         )}
         <input
           placeholder="FirstName"
@@ -74,7 +74,7 @@ const SideBar = () => {
           }
         />
         {errors.lastName && touched.lastName && (
-          <p className={styles.errorText}>{errors.lastName}</p>
+          <label className={styles.errorText}>{errors.lastName}</label>
         )}
         <input
           placeholder="LastName"
@@ -88,7 +88,7 @@ const SideBar = () => {
           }
         />
         {errors.job && touched.job && (
-          <p className={styles.errorText}>{errors.job}</p>
+          <label className={styles.errorText}>{errors.job}</label>
         )}
         <input
           placeholder="Job"
@@ -100,7 +100,7 @@ const SideBar = () => {
           className={errors.job && touched.job ? styles.inputError : ''}
         />
         {errors.skills && touched.skills && (
-          <p className={styles.errorText}>{errors.skills}</p>
+          <label className={styles.errorText}>{errors.skills}</label>
         )}
         <input
           placeholder="HTML, CSS, Javascript...."
@@ -112,7 +112,7 @@ const SideBar = () => {
           className={errors.skills && touched.skills ? styles.inputError : ''}
         />
         {errors.email && touched.email && (
-          <p className={styles.errorText}>{errors.email}</p>
+          <label className={styles.errorText}>{errors.email}</label>
         )}
         <input
           placeholder="example@gmail.com"
@@ -124,7 +124,7 @@ const SideBar = () => {
           className={errors.email && touched.email ? styles.inputError : ''}
         />
         {errors.phone && touched.phone && (
-          <p className={styles.errorText}>{errors.phone}</p>
+          <label className={styles.errorText}>{errors.phone}</label>
         )}
         <input
           placeholder="your phone number"
@@ -135,7 +135,11 @@ const SideBar = () => {
           onBlur={handleBlur}
           className={errors.phone && touched.phone ? styles.inputError : ''}
         />
-        <Button type="submit" disabled={isLoading}>
+        <Button
+          type="submit"
+          disabled={isLoading}
+          style={{ display: 'block', margin: '8px auto' }}
+        >
           Generate Cover Letter
         </Button>
         <Button isLink={true} linkPath="/" className={styles.backBtn}>

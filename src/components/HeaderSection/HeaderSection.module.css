@@ -29,3 +29,9 @@
 .headerSection button:hover {
   background-color: rgb(30, 159, 202);
 }
+
+@media (max-width: 580px) {
+  .headerSection h1 {
+    font-size: 2rem;
+  }
+}

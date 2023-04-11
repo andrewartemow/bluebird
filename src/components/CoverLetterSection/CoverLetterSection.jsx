@@ -49,13 +49,6 @@ const CoverLetterSection = () => {
     );
   };
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const letter = await runPrompt({ ...letterDetails });
-  //     setLetter(letter);
-  //   })();
-  // }, [letterDetails]);
-
   return (
     <Section sectionStyles={{ padding: 0 }} withContainer={true}>
       <div className={styles.coverLetterSection}>{renderLetter()}</div>

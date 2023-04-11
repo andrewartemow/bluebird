@@ -5,7 +5,7 @@ import styles from './HeaderSection.module.css';
 
 const HeaderSection = () => {
   return (
-    <Section withContainer={true}>
+    <Section sectionStyles={{ padding: '0 20px' }} withContainer={true}>
       <div className={styles.headerSection}>
         <h1>Create your perfect cover letter</h1>
         <span>

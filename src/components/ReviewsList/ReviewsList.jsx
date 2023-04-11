@@ -32,6 +32,13 @@ const ReviewsList = () => {
           slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 580,
+        settings: {
+          ...defaultSettings,
+          slidesToShow: 1,
+        },
+      },
     ],
   };
   return (
